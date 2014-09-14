@@ -1,0 +1,24 @@
+{
+  "name": "learn-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Gruntfile.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-env": "^0.4.1",
+    "grunt-mocha-test": "^0.12.0",
+    "matchdep": "^0.3.0",
+    "mocha": "^1.21.4",
+    "should": "^4.0.4",
+    "sinon": "^1.10.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "1ambda <1amb4a@gmail.com>",
+  "license": "MIT"
+}
