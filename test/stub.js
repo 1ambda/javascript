@@ -66,11 +66,37 @@ describe('stub', function() {
 
       var stub = sinon.stub();
       stub(callback0, callback1, callback2); // save args as parameters
+      
       stub.callArg(1); // call callback1
-
       callback0.called.should.be.eql(false);
       callback1.calledOnce.should.be.eql(true);
       callback2.called.should.be.eql(false);
+      
+      stub.callArg(0); // call callback0
+      callback0.called.should.be.eql(true);
+      callback1.calledOnce.should.be.eql(true);
+      callback2.called.should.be.eql(false);
+    });
+
+    it('stub\'s yield can make invoking callback', function(done) {
+
+      var from = "user@domain.com";
+      var to = "notice@domain.com";
+      var user = createUser();
+      user.register(from);
+      
+      sinon.stub(user, 'sendMail').yields({
+	from: from,
+	to: to
+      });
+
+      user.sendMail(to, function(info) {
+	info.should.have.property('from');
+	info.from.should.eql(from);
+	info.should.have.property('to');
+	info.to.should.eql(to);
+	done();
+      });
     });
   });
 });
