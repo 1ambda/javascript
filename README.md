@@ -1,4 +1,7 @@
-# Javascript Note
-=============
+# Javascript Playground
 
-1. testing with Sinon  
+- javascript
+- coffeescript
+- iced coffeescript
+- es6
+
