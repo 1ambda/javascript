@@ -1,0 +1,16 @@
+{
+  "name": "es6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "generator-function.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "1ambda <1amb4a@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "chai": "^2.3.0",
+    "mocha": "^2.2.4",
+    "should": "^6.0.1"
+  }
+}
